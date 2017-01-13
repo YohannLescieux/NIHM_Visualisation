@@ -43,17 +43,13 @@ class City {
      textSize(30);
      text("Carte des villes de plus de 141000 habitants", 10, 770);*/
        //Ligne de séparation
-  
-  
-  
+
+//Densité
      stroke(0,0,0);
      strokeWeight(2);
      if(affiche && click){
       fill(255,204,204);
       ellipse((int) mapX(this.x), (int) mapY(this.y), this.density/100,this.density/100);
-     }else if(affiche && !click){
-       fill(0,0,255);
-       ellipse((int) mapX(this.x), (int) mapY(this.y), this.density/100,this.density/100);
      }else{
         fill(255,0,0);
         ellipse((int) mapX(this.x), (int) mapY(this.y), this.density/100,this.density/100);

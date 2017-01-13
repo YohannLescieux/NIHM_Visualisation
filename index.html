@@ -18,16 +18,16 @@
 				<li>Le logiciel processing : <a href="https://processing.org/download/?processing">ici</a></li>
 			</ul></p>
 
-		<h2 id="utilisation">Comment utiliser ?</h2>
+		<h2 id="utilisation">Utilisation</h2>
 			<ol>
-				<li>Telecharger l'archive des Tps et l'enregistrer : <a href="https://github.com///archive/master.zip">ici</a>.</li>
+				<li>Telecharger l'archive des Tps et l'enregistrer : <a href="https://github.com/YohannLescieux/NIHM_Visualisation/archive/master.zip">ici</a>.</li>
 				<li>Extraire l'archive.</li>
 				<li>Démarrer le logiciel processing.</li>
-				<li>Sous processing, ouvrir le fichier tp3.pde</li>
-				<li>Cliquer sur executer en haut à gauche de la fenêtre</li>	
+				<li>Sous processing, ouvrir le fichier tp3.pde.</li>
+				<li>Cliquer sur executer en haut à gauche de la fenêtre (Explication des différentes interactions par la suite).</li>	
 			</ol>	
 		
-		<h2 id="au_depart">Au depart, notre départ pour la visualisation</h2>
+		<h2 id="au_depart">Le commencement de notre visualisation</h2>
 			<p>J'ai décidé d'utiliser la carte des altitudes au départ. En effet, je souhaite savoir grâce aux données fournies et à comment je les disposes, s'il y a plus de personnes en altitude ou non. Mais encore, comment sont répartis les populations
 			dans la France par altitude. Ci-dessous, nous retrouvons un visuel de la carte de départ.</p>
 			<img border="1" src="Images/carte_altitude.png" alt="Carte d'altitude" width="30%" hspace="150px"> 
@@ -36,19 +36,19 @@
 			<h3>Choix des données</h3>
 				<p>Pour l'<b>altitude</b> : j'ai choisi d'utiliser des ellipses pour la représentation, elles sont coloriées à l'intérieur et sans bordure. Cela permet de colorier la carte avec toutes les altitudes si l'utilisateur choisi
 					d'afficher toutes les villes.</p>
-				<p>Pour la <b>densité de population</b> : </p>
+				<p>Pour la <b>densité de population</b> : j'ai choisi d'utiliser des ellipses, avec des bordures, variant de taille selon la densité. Si une densité est forte, l'ellipse aura une taille importante et inversement.</p>
 			<h3>Explication de l'interface et ses possibilités</h3>
-				<p>Nous avons tout d'abord décidé de prendre en compte les altitudes, afin de voir si une population est plus présente là où il y a une forte densité ou non. On se base sur la carte des altitudes pour avoir une bonne représentation au niveau couleur.</p>
+				<p>J'ai tout d'abord décidé de prendre en compte les altitudes, afin de voir si une population est plus présente là où il y a de fortes altitudes. On se base sur la carte des altitudes (voir sources) pour avoir une bonne représentation au niveau couleur.</p>
 				<p>Création du slider pour pouvoir choisir le nombre de population à afficher sur notre carte. J'ai choisi de mettre ce slider pour faciliter l'interaction de l'utilisateur.</p>
-				<p>Il est possible d'afficher les noms en passant la souris sur les différentes villes. Pour cela, nous créons un rectangle à côté du cercle où notre curseur se situe. De plus, sur la droite de notre affichage, nous avons différentes informations.
-					J'ai pensé à afficher le nom et le code postal de la ville où notre curseur est (sans prendre en compte le clique pour le moment), la population de cette ville, sa surface, sa densité et surtout son altitude ici.
-					Le fait de comparer deux villes me permet de savoir quelle ville à le plus de population ou la plus grande altitude. Pour cela, si notre utilisateur clique sur un des cercles de densité, on va sauvegarder le clique et garder l'affichage des informations
-					de cette ville. Cela nous permet de comparer. A noter que si l'utilisateur décide de réduire l'affichage, si notre ville sauvegardée à sa population inférieure à celle choisi par l'utilisateur, la sauvegarde est perdu.</p>
-				<p>Affichage de la légende pour connaitre les altitudes prisent en compte dans la visualisation. Cela permet à notre utilisateur de faire le lien avec la population et l'altitude.</p>
+				<p>Il est possible d'afficher les noms en passant la souris sur les différentes villes. Pour cela, nous créons un rectangle à côté du cercle où notre curseur se situe puis nous affichons le nom de la ville dans celui-ci. De plus, sur la droite de notre affichage, nous avons différentes informations.
+					J'ai pensé à afficher le nom et le code postal de la ville où notre curseur est (sans prendre en compte le clique pour le moment), la population de cette ville, sa surface, sa densité et surtout son altitude.
+					</p><p>Le fait de comparer deux villes me permet de savoir quelle ville à le plus de population ou la plus grande altitude. Pour comparer, si notre utilisateur clique sur une des ellipses, on va sauvegarder le clique et garder l'affichage des informations
+					de cette ville. Il va ensuite pouvoir placer son curseur sur une autre ville pour pouvoir comparer ensuite. A noter que si l'utilisateur décide de réduire l'affichage au niveau de la population, si notre ville sauvegardée à sa population inférieure à celle choisi par l'utilisateur, la sauvegarde est perdu.</p>
+				<p>Enfin, on affiche la légende pour connaitre les altitudes prisent en compte dans la visualisation. Cela permet à notre utilisateur de faire le lien avec la population et l'altitude.</p>
 				<img border="1" src="Images/carte2_altitude_save.png" alt="Carte altitude et sauvegardes" width="65%" hspace="150px"/>
 			
-				<p>Par la suite, ajout de la densité de population pour avoir un meilleur avis sur notre question posée précedemment.</p>
-				<img border="1" src="Images/carte2_altitude_save.png" alt="Carte altitude et sauvegardes" width="65%" hspace="150px"/>
+				<p>Par la suite, ajout de la densité de population pour avoir un meilleur avis sur notre question posée précedemment. On remarque que selon l'altitude, la densité de population sera différente, moins il y a d'altitude, plus il y aura de personnes.</p>
+				<img border="1" src="Images/carte3_altitude_densite.png" alt="Carte altitude et sauvegardes" width="65%" hspace="150px"/>
 			
 		<h2 id="sources">Sources</h2>
 			<p>Différentes sources ont été utilisées pour mener à bien cette visualisation.

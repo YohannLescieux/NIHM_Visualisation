@@ -127,7 +127,10 @@ void mouseClicked() {
     citySelection = null;
     }
   }else{
-    citySelection = null;
+    if(citySelection != null){
+    citySelection.click = false;
+     citySelection = null;
+    }
   }
 }
 
