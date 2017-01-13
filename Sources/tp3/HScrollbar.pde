@@ -68,8 +68,7 @@ class HScrollbar {
   }
 
   float getPos() {
-    // Convert spos to be values between
-    // 0 and the total width of the scrollbar
-    return spos * ratio;
+    //"1 -" Pour avoir l'inverse
+    return 1 - ((sposMax - spos)/(sposMax - sposMin));
   }
 }

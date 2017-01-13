@@ -17,6 +17,11 @@ h2 {
     margin-left: 40px;
 }
 
+h3 {
+    color: navy;
+    margin-left: 60px;
+}
+
 p{
 	text-align:justify;
 	text-indent:20px;

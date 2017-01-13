@@ -1,6 +1,4 @@
 //ETAPE 5
-
-
 class City { 
   int postalcode; 
   float x; 
@@ -27,7 +25,6 @@ class City {
     //set((int) mapX(this.x), (int) mapY(this.y), black);
     //noFill();
 
-    
      //Densité
      //ellipse((int) mapX(this.x), (int) mapY(this.y), this.density/100,this.density/100);
      
@@ -49,7 +46,7 @@ class City {
   
   
   
-     /*stroke(0,0,0);
+     stroke(0,0,0);
      strokeWeight(2);
      if(affiche && click){
       fill(255,204,204);
@@ -60,55 +57,55 @@ class City {
      }else{
         fill(255,0,0);
         ellipse((int) mapX(this.x), (int) mapY(this.y), this.density/100,this.density/100);
-     }*/
+     }
      
      //Altitude
        //Switch case pour avoir les différentes couleurs
-       noStroke();
-     color c;
-     c = color (0,0,0);   
-     int alt = (int)this.altitude;
-     //On test les différentes valeurs de ALT
-     if(alt < 20){
-        c = color(19,94,1); 
-     }else if(alt >= 20 && alt < 40){
-       c = color(20,107,0); 
-     }else if(alt >= 40 && alt < 70){
-       c = color(24,134,1); 
-     }else if(alt >= 70 && alt < 100){
-       c = color(33,153,6); 
-     }else if(alt >= 100 && alt < 150){
-       c = color(65,174,7); 
-     }else if(alt >= 150 && alt < 200){
-       c = color(90,187,19); 
-     }else if(alt >= 200 && alt < 300){
-       c = color(121,198,30); 
-     }else if(alt >= 300 && alt < 400){
-       c = color(160,231,75); 
-     }else if(alt >= 400 && alt < 500){
-       c = color(198,237,96); 
-     }else if(alt >= 500 && alt < 650){
-       c = color(247,242,138); 
-     }else if(alt >= 650 && alt < 800){
-       c = color(239,186,82); 
-     }else if(alt >= 800 && alt < 1000){
-       c = color(215,154,73); 
-     }else if(alt >= 1000 && alt < 1250){
-       c = color(200,134,56); 
-     }else if(alt >= 1250 && alt < 1500){
-       c = color(166,104,53); 
-     }else if(alt >= 1500 && alt < 1750){
-       c = color(134,85,44); 
-     }else if(alt >= 1750 && alt < 2000){
-       c = color(106,65,33); 
-     }else{
-       c = color(74,44,23); 
-     }
-     
-     fill(c);
-     ellipse((int) mapX(this.x), (int) mapY(this.y), 10,10);
-     fill(0, 0, 0);
-     textSize(30);
+         noStroke();
+       color c;
+       c = color (0,0,0);   
+       int alt = (int)this.altitude;
+       //On test les différentes valeurs de ALT
+       if(alt < 20){
+          c = color(19,94,1); 
+       }else if(alt >= 20 && alt < 40){
+         c = color(20,107,0); 
+       }else if(alt >= 40 && alt < 70){
+         c = color(24,134,1); 
+       }else if(alt >= 70 && alt < 100){
+         c = color(33,153,6); 
+       }else if(alt >= 100 && alt < 150){
+         c = color(65,174,7); 
+       }else if(alt >= 150 && alt < 200){
+         c = color(90,187,19); 
+       }else if(alt >= 200 && alt < 300){
+         c = color(121,198,30); 
+       }else if(alt >= 300 && alt < 400){
+         c = color(160,231,75); 
+       }else if(alt >= 400 && alt < 500){
+         c = color(198,237,96); 
+       }else if(alt >= 500 && alt < 650){
+         c = color(247,242,138); 
+       }else if(alt >= 650 && alt < 800){
+         c = color(239,186,82); 
+       }else if(alt >= 800 && alt < 1000){
+         c = color(215,154,73); 
+       }else if(alt >= 1000 && alt < 1250){
+         c = color(200,134,56); 
+       }else if(alt >= 1250 && alt < 1500){
+         c = color(166,104,53); 
+       }else if(alt >= 1500 && alt < 1750){
+         c = color(134,85,44); 
+       }else if(alt >= 1750 && alt < 2000){
+         c = color(106,65,33); 
+       }else{
+         c = color(74,44,23); 
+       }
+       
+       fill(c);
+       ellipse((int) mapX(this.x), (int) mapY(this.y), 10,10);
+       fill(0, 0, 0);
+       textSize(30);
   }
   
   
@@ -118,7 +115,8 @@ class City {
    // entre (px, py) et le centre du cercle, 
    // et on ajoute un pixel supplémentaire pour faciliter 
    // la sélection à la souris 
-   return dist(mapX(x), mapY(y), px, py) <= (this.density/100)/2 + 1; 
+   //return dist(mapX(x), mapY(y), px, py) <= 10/2 + 1;
+   return dist(mapX(x), mapY(y), px, py) <= (this.density/100)/2 + 1;
  }
  
       void afficheNom(){

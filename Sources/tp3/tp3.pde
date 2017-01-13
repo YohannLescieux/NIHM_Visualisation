@@ -34,8 +34,6 @@ PImage legende;
 HScrollbar hs1;
 
 
-
-
 //Setup de l'application
 void setup() { 
   size(1500,800); 
@@ -95,7 +93,7 @@ void draw(){
     textFont(Font2);
     text("Affichage de la population supérieures à "+minPopulationToDisplay, 1080, 265);
     hs1.display();
-    minPopulationToDisplay = (int)(hs1.getPos() * 10);
+    minPopulationToDisplay = (int)(hs1.getPos() * 150000);
 }
 
 
@@ -116,6 +114,7 @@ void mouseMoved() {
   }
 }
 
+
 //Clique de la souris
 void mouseClicked() {
   testCity = pick(mouseX, mouseY);
@@ -132,8 +131,6 @@ void mouseClicked() {
   }
 }
 
-
-
 //Pick
 City pick(int px, int py){
   int i = cit.length-100;
@@ -148,7 +145,7 @@ City pick(int px, int py){
 
 
 //Lecture appui au clavier
-void keyPressed() {
+/*void keyPressed() {
   if (key == '+') {
     if(minPopulationToDisplay > 0){
       minPopulationToDisplay *= 1.5;
@@ -161,7 +158,7 @@ void keyPressed() {
     }
   }
    redraw();
-}
+}*/
 
 
 
@@ -206,7 +203,6 @@ void parseInfo(String line) {
   maxSurface = float(infoPieces[8]);
   minAltitude = float(infoPieces[9]); 
   maxAltitude = float(infoPieces[10]); 
-  minPopulationToDisplay = 10;
 } 
 
 
