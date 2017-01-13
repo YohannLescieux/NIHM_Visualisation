@@ -1,16 +1,62 @@
 <!DOCTYPEhtml>
 <html>
 		<head>
-				<title>Visualisation - Yohann Lescieux</title>
+				<title>TP NIHM Visualisation - Yohann Lescieux</title>
 				<meta charset="utf-8">
-				<style>
-						/* ceci est un commentaire en langage CSS*/
-				</style>
-				<script>
-						// ceci est commentaire en JAVASCRIPT
-				</script>
+				<link rel="stylesheet" type="text/css" href="mystyle.css">
 		</head>
-<body>
-		<!-- ceci est un commentaire en langage HTML -->
-		<h1>Visualisation - Carte de la france</h1>
+<body>	
+		<div class="header">
+			<h1>Visualisation - Carte de la france - Yohann Lescieux</h1>
+		</div>
+		
+		<h2 id="introduction">Introduction</h2>
+			<p>Durant ces travaux pratiques de NIHM sur la visualisation, nous avons dû réaliser une visualisation de données avec une possibilité d'interaction sur celles-ci.<p>
+			<p>Pour faire cela, nous avons à notre disposition :
+			<ul>
+				<li>La page contenant les cours et les travaux pratiques : <a href="http://www.thomaspietrzak.com/enseignement/NIHM/partie2.htm">ici</a></li>
+				<li>Le logiciel processing : <a href="https://processing.org/download/?processing">ici</a></li>
+			</ul></p>
+
+		<h2 id="utilisation">Comment utiliser ?</h2>
+			<ol>
+				<li>Telecharger l'archive des Tps et l'enregistrer : <a href="https://github.com///archive/master.zip">ici</a>.</li>
+				<li>Extraire l'archive.</li>
+				<li>Démarrer le logiciel processing.</li>
+				<li>Sous processing, ouvrir le fichier tp3.pde</li>
+				<li>Cliquer sur executer en haut à gauche de la fenêtre</li>	
+			</ol>	
+		
+		<h2 id="au_depart">Au depart, notre départ pour la visualisation</h2>
+			<p>J'ai décidé d'utiliser la carte des altitudes au départ. En effet, je souhaite savoir grâce aux données fournies et à comment je les disposes, s'il y a plus de personnes en altitude ou non. Mais encore, comment sont répartis les populations
+			dans la France par altitude. Ci-dessous, nous retrouvons un visuel de la carte de départ.</p>
+			<img src="Images/carte_altitude.png" alt="Carte d'altitude" width="30%" hspace="150px"> 
+		
+		<h2 id="representation_visuelle1">Première représentation visuelle - Carte des altitudes + villes</h2>
+			<p>Nous avons tout d'abord décidé de prendre en compte les altitudes, afin de voir si une population est plus présente là où il y a une forte densité ou non. On se base sur la carte des altitudes pour avoir une bonne représentation au niveau couleur.
+			<BR>
+			<p>Création du slider pour pouvoir choisir le nombre de population à afficher sur notre carte. J'ai choisi de mettre ce slider, pour faciliter l'interaction de l'utilisateur.</p>
+			<BR>
+			<p>Il est possible d'afficher les noms en passant la souris sur les différentes villes. Pour cela, nous créons un rectangle à côté du cercle où notre curseur se situe. De plus, sur la droite de notre affichage, nous avons différentes informations.
+			J'ai pensé à afficher le nom et le code postal de la ville où notre curseur est (sans prendre en compte le clique pour le moment), la population de cette ville, sa surface, sa densité et surtout son altitude ici.
+			Le fait de comparer deux villes me permet de savoir quelle ville à le plus de population ou la plus grande altitude. Pour cela, si notre utilisateur clique sur un des cercles de densité, on va sauvegarder le clique et garder l'affichage des informations
+			de cette ville. Cela nous permet de comparer. A noter que si l'utilisateur décide de réduire l'affichage, si notre ville sauvegardée à sa population inférieure à celle choisi par l'utilisateur, la sauvegarde est perdu. 
+			<BR>
+			<p>Affichage de la légende pour connaitre les altitudes prisent en compte dans la visualisation. Cela permet à notre utilisateur de faire le lien avec la population et l'altitude.</p>
+			
+			<img src="" alt=""/>
+			
+			
+		<h2 id="sources">Sources</h2>
+			<p>Différentes sources ont été utilisées pour mener à bien cette visualisation.
+				<ul>
+					<li>Le code fournis dans les 3 tps : <a href="http://www.thomaspietrzak.com/enseignement/NIHM/tpvisu1.htm">TP1</a>, <a href="http://www.thomaspietrzak.com/enseignement/NIHM/tpvisu2.htm">TP2</a> et <a href="http://www.thomaspietrzak.com/enseignement/NIHM/tpvisu3.htm">TP3</a>.</li>
+					<li>Les données à utiliser pour la visualisation : <a href="http://www.cs.toronto.edu/~fchevali/fanny/masterIVI/villes.tsv">Données</a></li>
+					<li>La carte des altitudes  : <a href="http://www.cartesfrance.fr/geographie/cartes-relief/carte-relief-communes.html">ici</a></li>
+					<li>Avoir une écriture en gras sous processing : <a href="https://forum.processing.org/two/discussion/988/write-text-in-bold">Texte en gras</a></li>
+					<li>Palette de couleurs RGB : <a href="http://www.rapidtables.com/web/color/RGB_Color.htm">RGB</a></li>
+					<li>Création d'une image : <a href="https://processing.org/reference/image_.html">Image</a></li>
+					<li>Création d'un slider pour la population, reprise du code dans une classe : <a href="https://processing.org/examples/scrollbar.html">Slider</a></li>
+				</ul>
+			</p>
 </body></html>
